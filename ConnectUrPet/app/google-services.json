@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "89335249970",
+    "project_id": "connecturpet",
+    "storage_bucket": "connecturpet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89335249970:android:fadd4953b5e5c70d5cd02b",
+        "android_client_info": {
+          "package_name": "com.example.connecturpet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0XTiuC7YVSl_6brz8VtnY3J8-WzokTg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
