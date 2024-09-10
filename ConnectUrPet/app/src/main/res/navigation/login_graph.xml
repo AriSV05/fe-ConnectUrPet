@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_graph"
+    app:startDestination="@id/loginFrag">
+
+    <fragment
+        android:id="@+id/createAccountFrag"
+        android:name="com.example.connecturpet.view.CreateAccountFrag"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account">
+        <action
+            android:id="@+id/action_createAccountFrag_to_joinAs"
+            app:popUpTo="@id/joinAs" />
+        <argument
+            android:name="userType"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_createAccountFrag_to_loginFrag"
+            app:destination="@id/loginFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailRestartFrag"
+        android:name="com.example.connecturpet.EmailRestartFrag"
+        android:label="fragment_email_restart"
+        tools:layout="@layout/fragment_email_restart">
+        <action
+            android:id="@+id/action_emailRestartFrag_to_loginFrag"
+            app:popUpTo="@id/loginFrag" />
+        <action
+            android:id="@+id/action_emailRestartFrag_to_repeatPasswordFrag"
+            app:destination="@id/repeatPasswordFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinAs"
+        android:name="com.example.connecturpet.view.JoinAs"
+        android:label="fragment_join_as"
+        tools:layout="@layout/fragment_join_as">
+        <action
+            android:id="@+id/action_joinAs_to_loginFrag"
+            app:popUpTo="@id/loginFrag" />
+        <action
+            android:id="@+id/action_joinAs_to_createAccountFrag"
+            app:destination="@id/createAccountFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFrag"
+        android:name="com.example.connecturpet.view.LoginFrag"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFrag_to_joinAs"
+            app:destination="@id/joinAs" />
+        <action
+            android:id="@+id/action_loginFrag_to_emailRestartFrag"
+            app:destination="@id/emailRestartFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/repeatPasswordFrag"
+        android:name="com.example.connecturpet.RepeatPasswordFrag"
+        android:label="fragment_repeat_password"
+        tools:layout="@layout/fragment_repeat_password">
+        <action
+            android:id="@+id/action_repeatPasswordFrag_to_loginFrag"
+            app:popUpTo="@id/loginFrag" />
+    </fragment>
+</navigation>

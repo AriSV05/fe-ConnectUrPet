@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Button_Royal_Blue">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/royal_blue_btn</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingHorizontal">40dp</item>
+    </style>
+
+    <style name="Button_Saffron">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/saffron_btn</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingHorizontal">40dp</item>
+    </style>
+
+    <style name="Button_Blush">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/blush_btn</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingHorizontal">40dp</item>
+    </style>
+
+    <style name="Button_Alabaster">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/alabaster_btn</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingHorizontal">40dp</item>
+    </style>
+
+    <style name="Saffron_Border">
+        <item name="android:background">@drawable/saffron_field</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Royal_Blue_Border">
+        <item name="android:background">@drawable/royal_blue_border</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Login_bg">
+        <item name="android:background">@drawable/login_card_bg</item>
+        <item name="android:textColor">@color/Royal_Blue</item>
+    </style>
+
+    <style name="Background_Royal_Blue">
+        <item name="android:background">@drawable/background_royal_blue</item>
+    </style>
+
+    <style name="Background_Saffron">
+        <item name="android:background">@drawable/background_saffron</item>
+    </style>
+
+    <style name="Background_Alabaster">
+        <item name="android:background">@drawable/background_alabaster</item>
+    </style>
+
+    <style name="Royal_Blue_Texts">
+        <item name="android:textColor">@color/Royal_Blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Black_Texts">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="White_Texts">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Royal_Blue_Border_Texts">
+        <item name="android:background">@drawable/royal_blue_field</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">250dp</item>
+        <item name="android:padding">7dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Back_Arrow">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginVertical">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">60dp</item>
+        <item name="android:src">@drawable/ic_left_arrow</item>
+        <item name="android:tint">@color/Saffron</item>
+    </style>
+
+</resources>

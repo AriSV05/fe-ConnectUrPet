@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="Alabaster">#EFECEC</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="Royal_Blue">#3531E0</color>
+    <color name="Cornflower_Blue">#518DF5</color>
+    <color name="Saffron">#F4C447</color>
+    <color name="Blush">#E03151</color>
+
+    <color name="Royal_Blue_pressed">#28318a</color>
+    <color name="Cornflower_Blue_pressed">#3c6ab9</color>
+    <color name="Saffron_pressed">#d3a419</color>
+    <color name="Blush_pressed">#ad203a</color>
+
+
+
+</resources>

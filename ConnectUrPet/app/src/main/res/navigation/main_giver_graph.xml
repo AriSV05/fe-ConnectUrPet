@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_giver_graph"
+    app:startDestination="@id/giverHomeFrag">
+
+    <fragment
+        android:id="@+id/giverHomeFrag"
+        android:name="com.example.connecturpet.GiverHomeFrag"
+        android:label="GiverHomeFrag"
+        tools:layout="@layout/fragment_giver_home">
+        <action
+            android:id="@+id/action_giverHomeFrag_to_addPetProfileFrag"
+            app:destination="@id/addPetProfileFrag" />
+        <action
+            android:id="@+id/action_giverHomeFrag_to_petEditProfileFrag"
+            app:destination="@id/petEditProfileFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFrag"
+        android:name="com.example.connecturpet.NotificationFrag"
+        android:label="NotificationFrag"
+        tools:layout="@layout/fragment_notification" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/addPetProfileFrag"
+        android:name="com.example.connecturpet.AddPetProfileFrag"
+        android:label="fragment_add_pet_profile"
+        tools:layout="@layout/fragment_add_pet_profile" >
+        <action
+            android:id="@+id/action_addPetProfileFrag_to_giverHomeFrag"
+            app:popUpTo="@id/giverHomeFrag" />
+        <action
+            android:id="@+id/action_addPetProfileFrag_to_petVaccinesFrag"
+            app:destination="@id/petVaccinesFrag" />
+        <argument
+            android:name="idUser"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/petVaccinesFrag"
+        android:name="com.example.connecturpet.AddVaccinesFrag"
+        android:label="PetVaccinesFrag"
+        tools:layout="@layout/fragment_add_vaccines">
+        <action
+            android:id="@+id/action_petVaccinesFrag_to_addPetProfileFrag"
+            app:popUpTo="@id/addPetProfileFrag" />
+        <action
+            android:id="@+id/action_petVaccinesFrag_to_petEditProfileFrag"
+            app:popUpTo="@id/petEditProfileFrag" />
+        <argument
+            android:name="petID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/petEditProfileFrag"
+        android:name="com.example.connecturpet.PetEditProfileFrag"
+        android:label="fragment_pet_edit_profile"
+        tools:layout="@layout/fragment_pet_edit_profile" >
+        <action
+            android:id="@+id/action_petEditProfileFrag_to_giverHomeFrag"
+            app:popUpTo="@id/giverHomeFrag" />
+        <action
+            android:id="@+id/action_petEditProfileFrag_to_petVaccinesFrag"
+            app:destination="@id/petVaccinesFrag" />
+        <argument
+            android:name="petID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/givEditProfFrag"
+        android:name="com.example.connecturpet.view.GivEditProfFrag"
+        android:label="fragment_giv_edit_prof"
+        tools:layout="@layout/fragment_giv_edit_prof" >
+        <action
+            android:id="@+id/action_givEditProfFrag_to_reviewsFrag"
+            app:destination="@id/reviewsFrag_G" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewsFrag_G"
+        android:name="com.example.connecturpet.ReviewsFrag"
+        android:label="ReviewsFrag"
+        tools:layout="@layout/fragment_reviews">
+        <action
+            android:id="@+id/action_reviewsFragGiv_to_givEditProfFrag"
+            app:popUpTo="@id/givEditProfFrag" />
+        <argument
+            android:name="giverID"
+            app:argType="string" />
+    </fragment>
+</navigation>
