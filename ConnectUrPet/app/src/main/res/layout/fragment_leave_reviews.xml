@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LeaveReviewsFrag">
+
+    <include
+        android:id="@+id/app_name"
+        layout="@layout/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/punt_tv"
+        style="@style/Royal_Blue_Texts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="21dp"
+        android:text="@string/select_puntuation"
+        app:layout_constraintStart_toEndOf="@id/puntuation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_name" />
+
+    <Spinner
+        android:id="@+id/puntuation"
+        style="@style/Royal_Blue_Border_Texts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/punt_tv"
+        app:layout_constraintTop_toBottomOf="@id/app_name" />
+
+    <TextView
+        android:id="@+id/leave_desc_tv"
+        style="@style/Royal_Blue_Texts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="21dp"
+        android:text="@string/write_below"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/puntuation" />
+
+    <EditText
+        android:id="@+id/review_desc"
+        style="@style/Royal_Blue_Border_Texts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:maxHeight="420dp"
+        app:layout_constraintTop_toBottomOf="@id/leave_desc_tv"
+        tools:layout_editor_absoluteX="10dp"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis eget nunc lobortis mattis. Pellentesque habitant morbi tristique senectus. Sed arcu non odio euismod lacinia at quis risus sed. Et malesuada fames ac turpis egestas. Volutpat sed cras ornare arcu dui vivamus arcu felis. Semper auctor neque vitae tempus quam pellentesque nec nam. Non pulvinar neque laoreet suspendisse interdum consectetur. Quisque id diam vel quam elementum pulvinar etiam non. Quis risus sed vulputate odio ut enim blandit volutpat. In egestas erat imperdiet sed euismod nisi porta lorem. Id faucibus nisl tincidunt eget nullam non nisi. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Praesent elementum facilisis leo vel fringilla est ullamcorper. Ultrices sagittis orci a scelerisque purus semper. Tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Quis lectus nulla at volutpat diam ut. Turpis egestas maecenas pharetra convallis posuere morbi leo urna. Sit amet justo donec enim." />
+
+    <Button
+        android:id="@+id/leaveReview"
+        style="@style/Button_Saffron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/leave_review"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/review_desc" />
+
+    <ImageView
+        android:id="@+id/go_back_arrow"
+        style="@style/Back_Arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/shadow_Saffron"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_saffron" />
+
+    <View
+        android:id="@+id/shadow_Alabaster"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_alabaster" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vaccine_card"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:id="@+id/ic_vaccine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_vaccine"
+            android:layout_height="40dp"
+            app:tint="@color/Royal_Blue" />
+
+        <TextView
+            android:id="@+id/vaccine_name"
+            style="@style/Black_Texts"
+            android:layout_width="180dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_vaccine"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Lorem ipsum " />
+
+        <ImageView
+            android:id="@+id/add_vaccine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_confirm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/vaccine_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/Royal_Blue" />
+
+            <ImageView
+                android:id="@+id/delete_vaccine"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_denied"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/add_vaccine"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/Blush" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

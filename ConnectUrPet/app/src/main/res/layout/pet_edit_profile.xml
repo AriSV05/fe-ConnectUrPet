@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="230dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/personality_tv"
+        style="@style/Black_Texts"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/personality"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/personality_value"
+        style="@style/Royal_Blue_Border_Texts"
+        android:layout_width="170dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/personality_tv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_pencil"
+        app:layout_constraintStart_toEndOf="@id/personality_value"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/Royal_Blue" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        style="@style/Royal_Blue_Border_Texts"
+        android:layout_width="300dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/ic_pencil_D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/personality_value">
+
+        <EditText
+            android:id="@+id/description_field"
+            style="@style/Black_Texts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/ic_pencil_D"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:src="@drawable/ic_pencil"
+        app:layout_constraintBottom_toBottomOf="@id/scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/scroll"
+        app:tint="@color/Royal_Blue" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/save_btn"
+        app:layout_constraintTop_toBottomOf="@id/scroll">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/born_date_tv"
+                style="@style/Black_Texts"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/born_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/born_date_value"
+                style="@style/Royal_Blue_Border_Texts"
+                android:layout_width="170dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@id/born_date_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/calendar_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintStart_toEndOf="@+id/born_date_value"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/Royal_Blue" />
+
+            <TextView
+                android:id="@+id/size_tv"
+                style="@style/Black_Texts"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/born_date_tv" />
+
+            <Spinner
+                android:id="@+id/size_value"
+                style="@style/Royal_Blue_Border_Texts"
+                android:layout_width="170dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@id/size_tv"
+                app:layout_constraintTop_toBottomOf="@id/born_date_value" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_pencil"
+                app:layout_constraintStart_toEndOf="@+id/size_value"
+                app:layout_constraintTop_toTopOf="@id/size_value"
+                app:tint="@color/Royal_Blue" />
+
+            <TextView
+                android:id="@+id/specie_tv"
+                style="@style/Black_Texts"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/specie"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/size_tv" />
+
+            <Spinner
+                android:id="@+id/specie_value"
+                style="@style/Royal_Blue_Border_Texts"
+                android:layout_width="170dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@id/specie_tv"
+                app:layout_constraintTop_toBottomOf="@id/size_value" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_pencil"
+                app:layout_constraintStart_toEndOf="@+id/specie_value"
+                app:layout_constraintTop_toTopOf="@id/specie_value"
+                app:tint="@color/Royal_Blue" />
+
+            <TextView
+                android:id="@+id/breed_tv"
+                style="@style/Black_Texts"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/breed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/specie_tv" />
+
+            <Spinner
+                android:id="@+id/breed_value"
+                style="@style/Royal_Blue_Border_Texts"
+                android:layout_width="170dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@id/specie_tv"
+                app:layout_constraintTop_toBottomOf="@id/specie_value" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_pencil"
+                app:layout_constraintStart_toEndOf="@+id/breed_value"
+                app:layout_constraintTop_toTopOf="@id/breed_value"
+                app:tint="@color/Royal_Blue" />
+
+            <TextView
+                android:id="@+id/sex_tv"
+                style="@style/Black_Texts"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/sex"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/breed_tv" />
+
+            <Spinner
+                android:id="@+id/sex_value"
+                style="@style/Royal_Blue_Border_Texts"
+                android:layout_width="170dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@id/sex_tv"
+                app:layout_constraintTop_toBottomOf="@id/breed_value" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_pencil"
+                app:layout_constraintStart_toEndOf="@+id/sex_value"
+                app:layout_constraintTop_toTopOf="@id/sex_value"
+                app:tint="@color/Royal_Blue" />
+
+            <TextView
+                style="@style/Black_Texts"
+                android:textSize="20sp"
+                android:id="@+id/add_when"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sex_tv"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:text="@string/add_vaccines_when"
+                android:visibility="invisible"
+                />
+
+            <Button
+                android:id="@+id/vaccines_btn"
+                style="@style/Button_Saffron"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="35dp"
+                android:text="@string/vaccines"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sex_tv" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/save_btn"
+        style="@style/Button_Royal_Blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/save_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
