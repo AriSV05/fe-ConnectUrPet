@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">ConnectUrPet</string>
+
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create">Create</string>
+    <string name="search">Search</string>
+    <string name="add_btn">Add</string>
+    <string name="save_btn">Save</string>
+    <string name="edit_btn">Edit</string>
+    <string name="all_btn">All</string>
+    <string name="pets">Pets</string>
+    <string name="giver">Giver</string>
+    <string name="adopter">Adopter</string>
+    <string name="confirm">Confirm</string>
+    <string name="giver_profile">Giver profile</string>
+    <string name="leave_review">Leave review</string>
+    <string name="see_reviews">See reviews</string>
+    <string name="new_to">New to ConnectUrPet?\nCreate an account</string>
+    <string name="join_us">Do you want to join us as a Giver or Adopter?</string>
+    <string name="email_restart">Write your email to restart your account</string>
+    <string name="reset_password">Reset your password</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="invalid_email">Not a valid email</string>
+    <string name="invalid_password">Password must be >=5 characters</string>
+    <string name="empty_name">Empty name</string>
+    <string name="fields_empty_error">Empty spaces</string>
+    <string name="size">Size</string>
+    <string name="specie">Specie</string>
+    <string name="vaccines">Vaccines</string>
+    <string name="sex">Sex</string>
+    <string name="born_date">Born date</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="register_failed">"Register failed"</string>
+    <string name="notifications">Notifications</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+
+    <string name="new_btn">NEW</string>
+    <string name="personality">Personality</string>
+
+    <string name="pet_vaccines">Pet vaccines</string>
+    <string name="all_pet_vaccines">All Pet Vaccines</string>
+
+    <string name="select_puntuation">Select puntuation</string>
+    <string name="write_below">Write the review below</string>
+    <string name="breed">Breed</string>
+    <string name="add_vaccines_when">Add vaccines when the pet is saved on edit mode</string>
+    <string name="logout">Logout</string>
+    <string name="heroku_bk">Heroku backend</string>
+    <string name="firebase">Firebase backend</string>
+    <string name="tips">Tips</string>
+    <string name="care_recommendations">Care recommendations</string>
+
+
+</resources>

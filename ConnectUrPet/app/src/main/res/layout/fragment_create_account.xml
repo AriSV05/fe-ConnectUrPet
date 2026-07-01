@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAccountFrag">
+
+    <include
+        android:id="@+id/big_app_name"
+        layout="@layout/big_app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/back_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/big_app_name">
+
+        <RadioButton
+            android:id="@+id/heroku"
+            style="@style/Black_Texts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heroku_bk" />
+
+        <RadioButton
+            android:id="@+id/firebase"
+            style="@style/Black_Texts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/firebase" />
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_card_bg"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="30dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_options"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <TextView
+            android:id="@+id/tv_email"
+            style="@style/Royal_Blue_Texts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="@string/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/email_field"
+            style="@style/Royal_Blue_Border_Texts"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_email"
+            tools:text="Lorem ipsum" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/Royal_Blue_Texts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="@string/name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_field" />
+
+        <EditText
+            android:id="@+id/name_field"
+            style="@style/Royal_Blue_Border_Texts"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_password"
+            style="@style/Royal_Blue_Texts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="@string/password"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_field" />
+
+        <EditText
+            android:id="@+id/password_field"
+            style="@style/Royal_Blue_Border_Texts"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_password" />
+
+        <!-- <TextView
+             android:id="@+id/tv_repeat"
+             style="@style/Royal_Blue_Texts"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginVertical="10dp"
+             android:text="@string/repeat_password"
+
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/password_field" />
+
+         <EditText
+             android:id="@+id/repeat_field"
+             style="@style/Royal_Blue_Border_Texts"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/tv_repeat" />-->
+
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+
+     <Button
+         android:id="@+id/create_btn"
+         style="@style/Button_Royal_Blue"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/create"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
+
+     <ImageView
+         android:id="@+id/go_back_arrow"
+         style="@style/Back_Arrow"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintStart_toStartOf="parent" />
+
+ </androidx.constraintlayout.widget.ConstraintLayout>

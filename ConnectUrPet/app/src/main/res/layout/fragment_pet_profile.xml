@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PetProfileFrag">
+
+    <include
+        android:id="@+id/app_name"
+        layout="@layout/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Royal_Blue_Texts"
+        app:layout_constraintEnd_toEndOf="@id/recommendations_btn"
+        app:layout_constraintStart_toStartOf="@id/recommendations_btn"
+        app:layout_constraintBottom_toTopOf="@id/recommendations_btn"
+        android:text="@string/tips"
+        />
+
+    <ImageView
+        android:id="@+id/recommendations_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_saffron"
+        android:src="@drawable/ic_pawprint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/details"
+        app:layout_constraintBottom_toBottomOf="@id/details"
+        app:tint="@color/Royal_Blue" />
+
+    <LinearLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/app_name">
+
+        <TextView
+            android:id="@+id/pet_name"
+            style="@style/Royal_Blue_Border_Texts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:text="Lorem ipsum" />
+
+        <ImageView
+            android:id="@+id/image_profile"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="5dp"
+            android:src="@drawable/ic_dog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pet_name"
+            app:tint="@color/Royal_Blue" />
+
+        <include
+            android:id="@+id/pet_personality"
+            layout="@layout/personality_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp" />
+    </LinearLayout>
+
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@id/details"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:id="@+id/desc"
+        style="@style/Royal_Blue_Border_Texts"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp">
+
+        <TextView
+            android:id="@+id/pet_description"
+            style="@style/Black_Texts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+    </ScrollView>
+
+
+    <ScrollView
+        app:layout_constraintBottom_toTopOf="@id/giver_profile"
+        app:layout_constraintTop_toBottomOf="@id/desc"
+        android:layout_width="match_parent"
+        android:id="@+id/scroll"
+        android:layout_marginVertical="20dp"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/born_date_tv"
+                style="@style/Black_Texts"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/born_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/born_date_value"
+                style="@style/Royal_Blue_Border_Texts"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@id/born_date_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/size_tv"
+                style="@style/Black_Texts"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/born_date_tv" />
+
+            <TextView
+                android:id="@+id/size_value"
+                style="@style/Royal_Blue_Border_Texts"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@id/size_tv"
+                app:layout_constraintTop_toBottomOf="@id/born_date_value" />
+
+            <TextView
+                android:id="@+id/specie_tv"
+                style="@style/Black_Texts"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/specie"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/size_tv" />
+
+            <TextView
+                android:id="@+id/specie_value"
+                style="@style/Royal_Blue_Border_Texts"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@id/specie_tv"
+                app:layout_constraintTop_toBottomOf="@id/size_value" />
+
+            <TextView
+                android:id="@+id/breed_tv"
+                style="@style/Black_Texts"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/breed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/specie_tv" />
+
+            <TextView
+                android:id="@+id/breed_value"
+                style="@style/Royal_Blue_Border_Texts"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@id/specie_tv"
+                app:layout_constraintTop_toBottomOf="@id/specie_value" />
+
+
+            <TextView
+                android:id="@+id/sex_tv"
+                style="@style/Black_Texts"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/sex"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/breed_tv" />
+
+            <TextView
+                android:id="@+id/sex_value"
+                style="@style/Royal_Blue_Border_Texts"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toEndOf="@id/sex_tv"
+                app:layout_constraintTop_toBottomOf="@id/breed_value" />
+
+            <Button
+                android:id="@+id/vaccines_btn"
+                style="@style/Button_Saffron"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vaccines"
+                android:layout_marginEnd="35dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sex_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/go_back_arrow"
+        style="@style/Back_Arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/giver_profile"
+        style="@style/Button_Royal_Blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/giver_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
